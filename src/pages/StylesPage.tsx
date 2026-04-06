@@ -4,9 +4,9 @@ export default function StylesPage() {
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
       <div className="mb-12">
-        <h2 className="text-4xl font-bold tracking-tight mb-3">Styles</h2>
+        <h2 className="text-4xl font-black tracking-tighter mb-3">Presets</h2>
         <p className="text-lg text-muted-foreground max-w-2xl">
-          Visual treatments that define the aesthetic of a web application. Discover how to create premium aesthetics using Tailwind CSS classes.
+          Visual treatments that define the aesthetic of a web application. Discover how the global engine transforms these base patterns into cohesive design systems.
         </p>
       </div>
 
@@ -19,10 +19,10 @@ export default function StylesPage() {
           prompt="Design a 'Frosted Glass' (Glassmorphism) card using Tailwind CSS. Use a vibrant background image or mesh gradient for the parent container. The card itself should have a translucent background (like bg-white/10 or bg-white/20 for light mode, bg-black/20 for dark mode), a strong background blur (backdrop-blur-md or lg), and a subtle 1px border (border-white/20) to define its edge."
         >
           {/* Mock background mesh */}
-          <div className="absolute inset-0 bg-amber-100/50 dark:bg-zinc-950 overflow-hidden -z-10">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-            <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+          <div className="absolute inset-0 bg-amber-50/50 dark:bg-zinc-950/50 overflow-hidden -z-10 transition-colors duration-500">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-pink-400/20 dark:bg-pink-600/10 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-3xl animate-blob"></div>
+            <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-400/20 dark:bg-purple-600/10 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-3xl animate-blob animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-primary/20 dark:bg-primary/10 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-3xl animate-blob animation-delay-4000"></div>
           </div>
 
           {/* Custom animated blobs would need custom tailwind plugins normally, but using standard tailwind here. If no custom classes, I'll rely on the colors */}
@@ -90,14 +90,14 @@ export default function StylesPage() {
            description="Focuses on extreme simplicity, heavy use of white space, and impeccable typography over colors or shadows."
            prompt="Design a 'Minimalist' card using Tailwind CSS. Use high contrast (black text on pure white background). Rely on large, bold typography (text-5xl) and generous padding (p-12). Avoid any shadows or rounded corners. Use single-pixel black borders (border-black) and focus on a clean, structural layout."
         >
-          <div className="w-full bg-white p-12 border border-zinc-100 flex flex-col gap-6">
-             <div className="flex justify-between items-baseline border-b border-black pb-2 text-black">
-                <span className="text-xs font-bold tracking-widest uppercase">Issue 01</span>
-                <span className="text-xs font-medium">APRIL 2026</span>
+          <div className="w-full bg-white dark:bg-zinc-900 p-12 border border-zinc-100 dark:border-zinc-800 flex flex-col gap-6 transition-colors shadow-xl shadow-zinc-500/5">
+             <div className="flex justify-between items-baseline border-b border-black dark:border-white pb-2 text-black dark:text-white">
+                <span className="text-[10px] font-black tracking-widest uppercase">Issue 01</span>
+                <span className="text-[10px] font-medium tracking-widest">APRIL 2026</span>
              </div>
-             <h3 className="text-5xl font-black tracking-tighter leading-none italic text-black">LESS IS MORE</h3>
-             <p className="text-sm leading-relaxed max-w-xs font-medium text-zinc-900 border-l border-black pl-4">The beauty of architecture lies in the silence between the bricks.</p>
-             <button className="w-fit px-8 py-3 bg-black text-white text-xs font-bold uppercase tracking-widest hover:bg-zinc-800 transition-colors">EXPLORE</button>
+             <h3 className="text-5xl font-black tracking-tighter leading-none italic text-black dark:text-white">LESS IS MORE</h3>
+             <p className="text-sm leading-relaxed max-w-xs font-medium text-zinc-900 dark:text-zinc-300 border-l border-black dark:border-white pl-4">The beauty of architecture lies in the silence between the bricks.</p>
+             <button className="w-fit px-8 py-3 bg-black dark:bg-white text-white dark:text-black text-xs font-bold uppercase tracking-widest hover:opacity-80 transition-all">EXPLORE</button>
           </div>
         </PlaygroundCard>
 
@@ -107,15 +107,15 @@ export default function StylesPage() {
            description="A vibrant, high-contrast style that breaks traditional clean UI rules with thick borders and harsh shadows."
            prompt="Create a 'Neo-brutalism' element. Use ultra-thick borders (border-4 or 8), vibrant/ugly-pretty colors (bg-yellow-300, bg-pink-400), and hard, unblurred shadows (shadow-[8px_8px_0px_#000000]). Font should be bold or heavy (font-black). Don't use transitions unless they are snappy and immediate."
         >
-          <div className="p-8 bg-yellow-300 border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] transition-all">
-             <div className="w-12 h-12 bg-pink-400 border-4 border-black mb-4 flex items-center justify-center text-black">
+          <div className="p-8 bg-yellow-300 dark:bg-yellow-400 border-4 border-black dark:border-zinc-900 shadow-[8px_8px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] transition-all">
+             <div className="w-12 h-12 bg-pink-400 dark:bg-pink-500 border-4 border-black dark:border-zinc-900 mb-4 flex items-center justify-center text-black">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
              </div>
-             <h4 className="text-2xl font-black border-b-4 border-black pb-2 mb-4 text-black">BOLD AS HELL</h4>
+             <h4 className="text-2xl font-black border-b-4 border-black dark:border-zinc-900 pb-2 mb-4 text-black">BOLD AS HELL</h4>
              <p className="font-bold text-sm mb-6 text-black">Traditional UI is boring. High contrast rules everything.</p>
              <div className="flex gap-4">
-                <button className="px-4 py-2 bg-black text-white font-black hover:bg-zinc-900">DO IT</button>
-                <button className="px-4 py-2 bg-white border-4 border-black font-black hover:bg-zinc-100 text-black">NOPE</button>
+                <button className="px-4 py-2 bg-black text-white font-black hover:opacity-80">DO IT</button>
+                <button className="px-4 py-2 bg-white dark:bg-zinc-100 border-4 border-black dark:border-zinc-900 font-black hover:bg-zinc-100 text-black">NOPE</button>
              </div>
           </div>
         </PlaygroundCard>
