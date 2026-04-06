@@ -21,6 +21,16 @@ A premium, interactive design playground designed to be your ultimate reference 
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **State**: [React Context](https://reactjs.org/docs/context.html) for Style persistence
 
+## ✨ Key Features
+
+- 🎨 **Two-Dimensional Theme Engine**: Switch design languages (Modern, Minimalist, Bento, Brutalism) and color modes (Light/Dark) independently.
+- 📐 **Global Style Transforms**: Switching themes redefines typography, layout structures, and motion constants.
+- 🖱️ **Precision Interaction**: Restored standard web pointer behavior and refined all touchable surfaces for optimized UX.
+- 🌓 **Unified Dark Mode 2.0**: Every design style (Bento, Brutalism, etc.) now elegantly flips its theme in response to the global mode toggle.
+- ✨ **Buttery Smooth Transitions**: Fixed CSS inheritance conflicts to restore deep cubic-bezier momentum animations.
+- 🖼️ **Premium Template Gallery**: Explore high-impact, full-width design templates with optimized hover states.
+- 📝 **Copy-Paste AI Prompts**: Precise descriptive prompts for every design element.
+
 ## 💅 Design Languages
 
 ### 1. Modern (Glass 2.0)
